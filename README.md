@@ -1,8 +1,8 @@
-# GCS Leakage Detection
+# Physical information guided diffusion models
 
 Official PyTorch implementation <br>  
-CNN models for CO₂ leakage detection <br> 
-This artifact is developed based on the paper  [Ziyi Yin, Huseyin Tuna Erdinc, Abhinav Prakash Gahlot, Mathias Louboutin and F. Herrmann. “Derisking geological carbon storage from high-resolution time-lapse seismic to explainable leakage detection.” The Leading Edge (2023).](https://arxiv.org/pdf/2211.03527) <be>
+Reconstructing reservoir states from multimodal data via score-based generative models<br> 
+This code is developed based on the paper  [Shiqin Zeng, Haoyun Li, Abhinav Prakash Gahlot, Felix J. Herrmann. “Well2Flow: Reconstruction of reservoir states from sparse wells using score-based generative models.”](https://arxiv.org/abs/2504.06305) <be>
 <br>
 Below is the workflow diagram illustrating the detection process:
 
