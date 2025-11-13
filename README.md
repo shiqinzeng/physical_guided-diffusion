@@ -4,33 +4,28 @@ Official PyTorch implementation <br>
 Reconstructing reservoir states from multimodal data via score-based generative models<br> 
 This code is developed based on the paper  [Shiqin Zeng, Haoyun Li, Abhinav Prakash Gahlot, Felix J. Herrmann. “Well2Flow: Reconstruction of reservoir states from sparse wells using score-based generative models.”](https://arxiv.org/abs/2504.06305) <be>
 <br>
-Below is the workflow diagram illustrating the detection process:
+Below is the workflow diagram illustrating the training and inference process:
 
-![Workflow Diagram](workflows/workflows.png)
+![Workflow Diagram](work_diagram/workflow.png)
 
 ## Requirements
 
-Python libraries: See [requirements.yml](requirements.yml) for library dependencies. The conda environment can be set up using these commands:
+Python libraries: See [environment.yml](environment.yml) for library dependencies. The conda environment can be set up using these commands:
 
 ```bash
-conda env create -f requirements.yml
-conda activate leakage_detection
+conda env create -f environment.yml
+conda activate DiffusionPDE_seismic
 
 ```
-## Training Process
 
-Put the data under the [data](data/) directory, and train the dataset by running the Python script:
+## Physical guided information and well log data guidance
 
-```.bash
-python scripts/training_loop.py --dataset_path "data/dataset_jrm_1971_seismic_images?dl=0" --data_length 1971 --model_name "vgg16"
-```
+![Gradient](work_diagram/gradient.png)
 
-More details can be found under the notebook [training_demo.ipynb](scripts/training_demo.ipynb).
+## Forward modeling generated samples
 
+![Saturation](work_diagram/compare_s_pixelRMSE_and_1Dcurve.gif)
 
-## Uncertainty Analysis
-The multi-criteria decision-making (MCDM)-based Ensemble schema and uncertainty analysis details can be found in [artifacts_demo.ipynb](scripts/artifacts_demo.ipynb)
+## Inverse modeling generated samples
 
-Below is the uncertainty analysis process:
-![Workflow Diagram](workflows/uncertainty_analysis_flow.png)
-
+![Permeability](work_diagram/compare_k_pixelRMSE_and_1Dcurve.gif)
